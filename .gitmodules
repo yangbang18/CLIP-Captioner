@@ -1,0 +1,6 @@
+[submodule "CLIP"]
+	path = CLIP
+	url = https://github.com/openai/CLIP.git
+[submodule "coco-caption"]
+	path = coco-caption
+	url = https://github.com/ruotianluo/coco-caption.git

@@ -1,0 +1,36 @@
+VAP:
+  attribute_prediction: True
+  attribute_prediction_flags: 'V'
+  attribute_prediction_sparse_sampling: True
+  scope_format: [
+    "attr{}_{}_{}", 
+    [attribute_prediction_k, feats, modality]
+  ]
+VAP_SS0:
+  inherit_from: VAP
+  attribute_prediction_sparse_sampling: False
+TAP:
+  attribute_prediction: True
+  attribute_prediction_flags: 'I'
+  scope_format: [
+    "attr{}_{}_{}", 
+    [attribute_prediction_k, feats, modality]
+  ]
+TAP_RNN:
+  inherit_from: TAP
+  attribute_prediction_flags: 'S'
+  TAP_ln: True
+  TAP_pos: True
+DAP:
+  inherit_from: [VAP, TAP]
+  attribute_prediction_flags: 'VI'
+DAP_RNN:
+  inherit_from: DAP
+  attribute_prediction_flags: 'VS'
+  TAP_ln: True
+  TAP_pos: True
+diff_feats:
+  scope_format: [
+    "{}_{}",
+    [feats, modality]
+  ]

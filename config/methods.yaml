@@ -1,0 +1,38 @@
+Transformer:
+  encoder: Embedder
+  decoder: TransformerDecoder
+  cls_head: NaiveHead
+  decoding_type: ARFormer
+  fusion: temporal_concat
+TopDown:
+  encoder: Embedder
+  decoder: TopDownAttentionRNNDecoder
+  cls_head: NaiveHead
+  decoding_type: ARFormer
+  fusion: temporal_concat
+  rnn_type: lstm
+ARB:
+  encoder: EncoderWithHighWayBN
+  decoder: TransformerDecoder
+  cls_head: NaiveHead
+  decoding_type: ARFormer
+  fusion: temporal_concat
+NAB:
+  encoder: EncoderWithHighWayBN
+  decoder: TransformerDecoder
+  cls_head: NaiveHead
+  decoding_type: NARFormer
+  fusion: temporal_concat
+  length_prediction: True
+  length_beam_size: 6
+  iterations: 5
+  algorithm_print_sent: True
+  with_teacher_during_training: True
+  load_teacher_weights: True
+NACF:
+  inherit_from: NAB
+  decoder: TwoStageTransformerDecoder
+  visual_word_generation: True
+  demand: [VERB, NOUN]
+  use_ct: True
+  nv_weights: [0.8, 1.0]
