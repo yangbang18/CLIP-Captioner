@@ -2,15 +2,18 @@
 
 PyTorch Implementation of the paper
 
-> **CLIP Meets Video Captioners: Attribute-Aware Representation Learning Promotes Accurate Captioning**
+> **CLIP Meets Video Captioning: Concept-Aware Representation Learning Does Matter**
 >
-> Bang Yang and Yuexian Zou\*.
+> Bang Yang, Tong Zhang and Yuexian Zou\*.
 >
-> [[ArXiv](https://arxiv.org/abs/2111.15162)]
+> [[Springer](https://link.springer.com/chapter/10.1007/978-3-031-18907-4_29)], [[ArXiv](https://arxiv.org/pdf/2111.15162)]
 
 
 ## TOC
 
+- [CLIP-Captioner](#clip-captioner)
+  - [TOC](#toc)
+  - [Update Notes](#update-notes)
   - [Environment](#environment)
   - [Corpora/Feature Preparation](#corporafeature-preparation)
   - [Training](#training)
@@ -19,14 +22,23 @@ PyTorch Implementation of the paper
   - [Citation](#citation)
   - [Acknowledgements](#acknowledgements)
 
+## Update Notes
+[2023-02-23] Release the "dust-laden" code
+
+[`TODO`] Data release; fix some bugs if there has some.
 
 ## Environment
 
 1. Clone the repo:
 
 ```
-git clone git@github.com:yangbang18/CLIP-Captioner.git --recurse-submodules
+git clone https://github.com/yangbang18/CLIP-Captioner.git --recurse-submodules
+
+# Alternatively
+git clone https://github.com/yangbang18/CLIP-Captioner.git
+git submodule update --init
 ```
+
 
 2. Use Anaconda to create a new environment:
 
@@ -110,7 +122,9 @@ Preparing data on your own:
   python pretreatment/clip_feats.py --dataset MSRVTT --arch RN50x4
   python pretreatment/clip_feats.py --dataset MSRVTT --arch ViT-B/32
   ```
-* Extracting motion and audio features: comming soon
+* Extracting motion features: refer to [yangbang18/video-classification-3d-cnn](https://github.com/yangbang18/video-classification-3d-cnn)
+
+* Extracting audio features: comming soon
 
 ## Training
 
@@ -161,6 +175,8 @@ python train.py \
 - `DAP`: dual attribute prediction (used in Transformer-based methods)
 - `DAP_RNN`: dual attribute prediction (used in RNN-based methods)
 
+**Notes:** In the publication version of our paper, attribute prediction (AP) is renamed as concept detection (CD). Here I keep the task name unchanged because of laziness.
+
 **Examples:**
 
 ```
@@ -191,11 +207,13 @@ Please see the [notebooks](notebooks) folder.
 Please **[★star]** this repo and **[cite]** the following paper if you feel our code or models useful to your research:
 
 ```
-@article{yang2021clip,
-  title={CLIP Meets Video Captioners: Attribute-Aware Representation Learning Promotes Accurate Captioning},
-  author={Yang, Bang and Zou, Yuexian},
-  journal={arXiv preprint arXiv:2111.15162},
-  year={2021}
+@inproceedings{yang2022clip,
+  title={CLIP Meets Video Captioning: Concept-Aware Representation Learning Does Matter},
+  author={Yang, Bang and Zhang, Tong and Zou, Yuexian},
+  booktitle={Pattern Recognition and Computer Vision: 5th Chinese Conference, PRCV 2022, Shenzhen, China, November 4--7, 2022, Proceedings, Part I},
+  pages={368--381},
+  year={2022},
+  organization={Springer}
 }
 
 @inproceedings{yang2021NACF,
