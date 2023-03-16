@@ -23,9 +23,9 @@ PyTorch Implementation of the paper
   - [Acknowledgements](#acknowledgements)
 
 ## Update Notes
-[2023-02-23] Release the "dust-laden" code
+[2023-03-16] Add guideline for audio feature extraction; Update links for downloading pre-extracted features
 
-[`TODO`] Data release; fix some bugs if there has some.
+[2023-02-23] Release the "dust-laden" code
 
 ## Environment
 
@@ -83,7 +83,11 @@ Here we use `torch 1.7.1` based on `CUDA 10.1`. Lower versions of `torch` are im
 
 **Please remember to modify `base_data_path` in [config/Constants.py](config/Constants.py)**
 
-Preparing data on your own:
+Due to the legal and privacy concerns, we cannot directly share the downloaded videos or clips from YouTube in any way. Instead, we share the pre-processed files and pre-extracted feature files: [MSRVTT](https://pkueducn-my.sharepoint.com/:f:/g/personal/2101112290_pku_edu_cn/EkST0Ik4tpFJhbWqb70zdq4BB-LgXxuIKvER5_lxGSIMaw?e=raAeNs), [VATEX](https://pkueducn-my.sharepoint.com/:f:/g/personal/2101112290_pku_edu_cn/Er_ttYtTzYNOgApvEWLyJTIBM_RTV9xqlNc46A_HwF-r7w?e=9mdhWK) (`on-going`). 
+
+
+<details> 
+<summary>Preparing data on your own (click for details)</summary>
 
 1. Preprocessing corpora:
    ```
@@ -92,7 +96,8 @@ Preparing data on your own:
    ```
 2. Feature extraction:
 
-* Downloading all video files of [MSRVTT](http://ms-multimedia-challenge.com/2017/dataset) and VATEX
+
+* Downloading all video files of MSRVTT and VATEX
 * Extracting frames
 
   ```
@@ -124,7 +129,8 @@ Preparing data on your own:
   ```
 * Extracting motion features: refer to [yangbang18/video-classification-3d-cnn](https://github.com/yangbang18/video-classification-3d-cnn)
 
-* Extracting audio features: comming soon
+* Extracting audio features: refer to [yangbang18/vggish](https://github.com/yangbang18/vggish)
+</details>
 
 ## Training
 
