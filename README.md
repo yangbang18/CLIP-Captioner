@@ -23,6 +23,8 @@ PyTorch Implementation of the paper
   - [Acknowledgements](#acknowledgements)
 
 ## Update Notes
+[2023-04-11] Release all pre-extracted features used in the paper
+
 [2023-03-16] Add guideline for audio feature extraction; Update links for downloading pre-extracted features
 
 [2023-02-23] Release the "dust-laden" code
@@ -83,7 +85,7 @@ Here we use `torch 1.7.1` based on `CUDA 10.1`. Lower versions of `torch` are im
 
 **Please remember to modify `base_data_path` in [config/Constants.py](config/Constants.py)**
 
-Due to the legal and privacy concerns, we cannot directly share the downloaded videos or clips from YouTube in any way. Instead, we share the pre-processed files and pre-extracted feature files: [MSRVTT](https://pkueducn-my.sharepoint.com/:f:/g/personal/2101112290_pku_edu_cn/EkST0Ik4tpFJhbWqb70zdq4BB-LgXxuIKvER5_lxGSIMaw?e=raAeNs), [VATEX](https://pkueducn-my.sharepoint.com/:f:/g/personal/2101112290_pku_edu_cn/Er_ttYtTzYNOgApvEWLyJTIBM_RTV9xqlNc46A_HwF-r7w?e=9mdhWK) (`on-going`). 
+Due to the legal and privacy concerns, we cannot directly share the downloaded videos or clips from YouTube in any way. Instead, we share the pre-processed files and pre-extracted feature files: [MSRVTT](https://pkueducn-my.sharepoint.com/:f:/g/personal/2101112290_pku_edu_cn/EkST0Ik4tpFJhbWqb70zdq4BB-LgXxuIKvER5_lxGSIMaw?e=raAeNs), [VATEX](https://pkueducn-my.sharepoint.com/:f:/g/personal/2101112290_pku_edu_cn/Er_ttYtTzYNOgApvEWLyJTIBM_RTV9xqlNc46A_HwF-r7w?e=9mdhWK). 
 
 
 <details> 
@@ -216,7 +218,7 @@ Please **[★star]** this repo and **[cite]** the following paper if you feel ou
 @inproceedings{yang2022clip,
   title={CLIP Meets Video Captioning: Concept-Aware Representation Learning Does Matter},
   author={Yang, Bang and Zhang, Tong and Zou, Yuexian},
-  booktitle={Pattern Recognition and Computer Vision: 5th Chinese Conference, PRCV 2022, Shenzhen, China, November 4--7, 2022, Proceedings, Part I},
+  booktitle={Proceedings of the Chinese Conference on Pattern Recognition and Computer Vision},
   pages={368--381},
   year={2022},
   organization={Springer}
