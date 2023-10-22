@@ -23,11 +23,13 @@ PyTorch Implementation of the paper
   - [Acknowledgements](#acknowledgements)
 
 ## Update Notes
-[2023-04-11] Release all pre-extracted features used in the paper
+**[2023-10-22]** Please refer to our latest [repository](https://github.com/yangbang18/CARE) that inherits this codebase!
 
-[2023-03-16] Add guideline for audio feature extraction; Update links for downloading pre-extracted features
+**[2023-04-11]** Release all pre-extracted features used in the paper
 
-[2023-02-23] Release the "dust-laden" code
+**[2023-03-16]** Add guideline for audio feature extraction; Update links for downloading pre-extracted features
+
+**[2023-02-23]** Release the "dust-laden" code
 
 ## Environment
 
